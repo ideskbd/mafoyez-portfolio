@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import './App.css'
-import { GetSelectedTheme, ToggleTheme } from './_redux/actions/GlobalAction';
+import { GetSelectedTheme, ToggleTheme } from './_redux/actions/globalAction';
 import { useDispatch, useSelector } from 'react-redux';
 
 function App() {

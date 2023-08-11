@@ -1,6 +1,6 @@
 // import axios from "@/utils/axios";
 import * as Types from "../types/globalTypes";
-import { GetTheme, StoreTheme } from "../../utils/ManageStorage";
+import { GetTheme, StoreTheme } from "../../utils/manageStorage";
 
 export const ToggleTheme = (status) => (dispatch) => {
     const theme = status ? "dark" : "light";
