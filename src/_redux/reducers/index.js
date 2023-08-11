@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import GlobalReducer from './GlobalReducer'
+import GlobalReducer from './globalReducer'
 
 // export const rootReducer = {
 //     global: GlobalReducer,
