@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react'
-
-import './App.css'
+import { useEffect } from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { GetSelectedTheme, ToggleTheme } from './_redux/actions/globalAction';
 import { useDispatch, useSelector } from 'react-redux';
+import routes from './router/route';
 
 function App() {
 
@@ -19,22 +19,21 @@ function App() {
 
 
   return (
-    <>
-      <h2>React JS Theme</h2>
-      <div className='dark_mode'>
-        <input
-          className='dark_mode_input'
-          type='checkbox'
-          id='dark-mood-toggle'
-          onChange={changeTheme}
-          defaultChecked={theme === 'dark'}
-        />
-        <label className='dark_mode_label' htmlFor='dark-mood-toggle'>
-          Theme
-        </label>
-      </div>
-      {/* <button onClick={() => toggleTheme(!isDarkTheme)}>Light Mood</button> */}
-    </>
+    <BrowserRouter>
+      <Routes>
+        {
+          routes.map((route, index) => (
+            <Route
+              key={index}
+              exact={true}
+              path={route.path}
+              name={route.name}
+              element={<route.element />}
+            />
+          ))
+        }
+      </Routes>
+    </BrowserRouter>
   )
 }
 
