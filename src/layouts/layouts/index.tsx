@@ -14,7 +14,7 @@ interface ILayoutProps {
 
 const MainLayout = ({ title, children }: ILayoutProps) => {
 
-    const pageTitle = typeof title !== undefined && title !== null && title !== "" ? `${title} || M.A Foyez` : `M.A Foyez`;
+    const pageTitle = typeof title !== 'undefined' && title !== null && title !== "" ? `${title} || M.A Foyez` : `M.A Foyez`;
 
     return (
         <>
